@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLO-Bh-pwo">
+                                <rect key="frame" x="108" y="125" width="177" height="27"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgU-uq-Z8q">
+                                <rect key="frame" x="160" y="693" width="73" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ask">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sskButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJx-F6-Vv8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="vBV-93-ZZE">
+                                <rect key="frame" x="76" y="290" width="241" height="273.66666666666674"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="vBV-93-ZZE" firstAttribute="top" secondItem="aLO-Bh-pwo" secondAttribute="bottom" constant="138" id="83T-Fz-l3m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fgU-uq-Z8q" secondAttribute="bottom" constant="77" id="EM8-1W-ZES"/>
+                            <constraint firstItem="vBV-93-ZZE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="290" id="NA8-tY-3A2"/>
+                            <constraint firstItem="aLO-Bh-pwo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="aXh-nM-3E9"/>
+                            <constraint firstItem="vBV-93-ZZE" firstAttribute="centerX" secondItem="aLO-Bh-pwo" secondAttribute="centerX" id="acZ-0F-LUe"/>
+                            <constraint firstItem="fgU-uq-Z8q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="cyq-6w-cob"/>
+                            <constraint firstItem="vBV-93-ZZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76.122781065114282" id="dpg-0i-Or4"/>
+                            <constraint firstItem="fgU-uq-Z8q" firstAttribute="top" secondItem="vBV-93-ZZE" secondAttribute="bottom" constant="129.33333333333326" id="l4l-qo-6bg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fgU-uq-Z8q" secondAttribute="trailing" constant="160" id="oA8-sY-3La"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aLO-Bh-pwo" secondAttribute="trailing" constant="108" id="zt9-yD-f0K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="vBV-93-ZZE" id="vlZ-LM-OGB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-547" y="-13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball1" width="305" height="273.66665649414062"/>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
